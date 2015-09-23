@@ -2,7 +2,7 @@
 This repo is forked from https://github.com/stephenlautier/angular-typescript.
 This fork is a migration from Stephen's Visual Studio Code setup to a Visual Studio 2015 setup.
 
-To be able to use the usemin package properly you will need to adjust the external tools path settings in Visual Studio 2015 as the built in nodejs version does not yet have native Promise API support. You will need to install the latest nodejs globally.
+To be able to use the npm usemin package properly you will need to adjust the external tools path settings in Visual Studio 2015 as the built in nodejs version does not yet have native Promise API support. You will need to install the latest nodejs globally.
 
 # angular-typescript
 Sample application using Angular 1.x with Typescript, Gulp and bower.
