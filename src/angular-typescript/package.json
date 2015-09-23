@@ -1,5 +1,5 @@
 {
-  "name": "typescript-experimental",
+  "name": "angular-typescript",
   "version": "0.0.0",
   "author": "",
   "main": "app/build/index.js",
@@ -16,9 +16,9 @@
     "gulp-sourcemaps": "^1.5.2",
     "gulp-typescript": "^2.7.3",
     "gulp-uglify": "^1.2.0",
-    "gulp-usemin": "^0.3.11",
+    "gulp-usemin": "^0.3.14",
     "run-sequence": "^0.3.6",
-    "typescript": "^1.5.0-beta",
+    "typescript": "^1.6.0",
     "wiredep": "^2.2.2"
   },
   "scripts": {

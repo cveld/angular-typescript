@@ -1,0 +1,12 @@
+{
+	"compilerOptions": {
+		"target": "es5",	
+		"noImplicitAny": false,
+		"removeComments": false		
+	},
+	"excludes": [
+    "bower_components",
+    "node_modules",
+    "wwwroot"
+  ]
+}

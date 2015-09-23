@@ -25,7 +25,11 @@
     "lodash": "~3.9.3",
     "ng-command": "~0.2.0"
   },
-  "resolutions": {
-    "angular": "~1.4.0"
+  "overrides": {
+      "bootstrap": {
+         "main":[
+            "dist/css/bootstrap.css"
+         ]
+      }
   }
 }

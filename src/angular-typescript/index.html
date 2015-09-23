@@ -1,6 +1,9 @@
-<!doctype html>
+﻿<!doctype html>
 <html class="no-js" ng-app="heroes-app" ng-strict-di>
 <head>
+    <!-- taken from https://github.com/stephenlautier/angular-typescript -->
+    <!-- wiredep issue: https://github.com/taptapship/wiredep/issues/210 -->
+    <!-- usemin issue with regards to native promises since node 0.12. How to enable them? reverting to 0.3.10 -->
     <meta charset="utf-8">
     <title>Heroes App</title>
     <meta name="description" content="">
@@ -8,6 +11,7 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:vendorCss(.) styles/vendor.css -->
     <!-- bower:css -->
+
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(build) styles/app.css -->

@@ -12,6 +12,8 @@ var uglify = require("gulp-uglify");
 var minifyCss = require("gulp-minify-css");
 var del = require("del");
 
+var tsProject = tsc.createProject('tsconfig.json');
+
 var paths = {
 	tscripts: {
 		src: ["typings/tsd.d.ts", "app/app.consts.ts", "app/app.ts", "app/**/*.ts"],
@@ -65,13 +67,7 @@ gulp.task("compile:typescript", function () {
 	var tsResult = gulp
 		.src(paths.tscripts.src)
 		.pipe(sourcemaps.init())
-		.pipe(tsc({
-		module: "amd",
-		target: "ES5",
-		declarationFiles: false,
-		emitError: false,
-		emitDecoratorMetadata: true
-	}));
+		.pipe(tsc(tsProject));
 		
 	//tsResult.dts.pipe(gulp.dest("./def"))
 	return tsResult.js
@@ -92,7 +88,7 @@ gulp.task("compile:sass", function () {
 
 gulp.task("html", function () {
 	gulp.src(["app/**/*.html"])
-		.pipe(gulp.dest(paths.dist));
+		.pipe(gulp.dest("./build"));
 });
 
 gulp.task("minify", function () {
@@ -106,9 +102,10 @@ gulp.task("minify", function () {
 });
 
 gulp.task("bower", function () {
+    console.log(paths.dist);
 	gulp.src(paths.mainHtml)
 		.pipe(wiredep())
-		.pipe(gulp.dest(paths.dist));
+		.pipe(gulp.dest("./build"));
 });
 
 gulp.task("copy:fonts", function () {
